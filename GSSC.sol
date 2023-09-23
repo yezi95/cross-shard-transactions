@@ -7,18 +7,18 @@ contract GSSC{
     address owner;
     // mapping the address to account balance
     mapping (address => uint256) public balances;
-    // mapping the address to account lockedbalance
+    // mapping the address to account locked balance
     mapping(address => uint) public lockedBalances;
-    // mapping the address to account deposites
+    // mapping the address to account deposits
     mapping(address => uint) public deposits;
-    // mapping the address to shard number
+    // mapping the address to the shard number
     mapping(address => uint) public shardk;
    // the number of votes.
     uint public counter; 
-    //the total number of the arbitors is set as 10, and the threshold is set as 6.
+    //the total number of the arbitrators is set as 10, and the threshold is set as 6.
     uint tarbitor = 6; 
     mapping(address => string ) public signature; 
-    //the deadline time for node function call 
+    //the deadline time for the node function call 
     uint public epochtime; 
     uint public time;
 
