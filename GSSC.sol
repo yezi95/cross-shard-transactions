@@ -203,7 +203,7 @@ contract GSSC{
 } 
 
 //ABR-2 (Proof of Deliberateness)
-  function abr_2(address sender2, address receiver2, address[] arbitor2, uint number2, uint token2, uint deposit2) onlyOwner public payable {
+  function abr_2(address sender2, address receiver2, address[] arbitor2, uint number2, uint token2, uint deposit2) public payable {
     //the sender's balance must be greater than or equal to the token sent
     require(lockedBalances[sender2]>=token2, "No balance available");
     //the deposit of the sender and receiver needs to be greater than the predefined threshold 
@@ -247,7 +247,7 @@ contract GSSC{
 }
 
 //ABR-3 (Proof of Mis-matching)
- function abr_3(address sender3, address receiver3, address[] arbitor3, uint number3, uint token3, uint deposit3) onlyOwner public payable { 
+ function abr_3(address sender3, address receiver3, address[] arbitor3, uint number3, uint token3, uint deposit3) public payable { 
     //the sender's balance must be greater than or equal to the token sent
     require(lockedBalances[sender3]>=token3, "No balance available");
     //the deposit of the sender and receiver needs to be greater than the predefined threshold 
@@ -290,7 +290,7 @@ contract GSSC{
 }
 
 //ABR-4 (Proof of non-answer)
- function abr_4(address sender4, address receiver4, address[] arbitor4, uint number4, uint token4, uint deposit4) onlyOwner public payable {  
+ function abr_4(address sender4, address receiver4, address[] arbitor4, uint number4, uint token4, uint deposit4) public payable {  
     //the sender's balance must be greater than or equal to the token sent
     require(lockedBalances[sender4]>=token4, "No balance available");
     //the deposit of the sender and receiver needs to be greater than the predefined threshold 
